@@ -1,6 +1,5 @@
+import { DateTime } from './luxon.js';
 import { $text } from './selectors.js';
-
-const { DateTime } = luxon;
 
 $text(
   '.show-date span',
