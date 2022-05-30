@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 
-import { addBook, removeBook, populateBooksFromStorage } from "./modules/books_manager.js";
+import { addBook, removeBook, populateBooksFromStorage } from "./modules/books-manager.js";
 import { $select, $selectById } from "./modules/selectors.js";
 
 const anchors = $select('.navbar a', true);
