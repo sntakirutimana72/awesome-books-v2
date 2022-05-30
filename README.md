@@ -1,8 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# awesome-books-v2
+# Awesome Books
 
-> A Microverse GitHub template for projects built with _`html`_, _`css`_, and _`javascript`_ only.
+A Books manager webapp that lists existing records and allows user to add and remove to and from the books record.
+
+> This project is a remodel based on the original design in collaboration with **Levina Nadezhda in Microverse**
 
 
 ## Built With
@@ -10,12 +12,6 @@
 - html
 - css
 - JavaScript
-
-
-## Live Demo (if available)
-
-
-## Screenshots (if available)
 
 
 ## Getting Started
@@ -76,4 +72,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Fellow Micronauts
+- Levina Nadezhda ([@petushka1](https://github.com/petushka1)) ~ Co-Partner on the original design
