@@ -1,5 +1,7 @@
 /* eslint-disable consistent-return */
 
+export const addNewForm = document.forms[0];
+
 /**
  *
  * @param {String} target

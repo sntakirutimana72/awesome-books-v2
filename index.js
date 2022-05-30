@@ -1,32 +1,28 @@
 /* eslint-disable no-restricted-syntax */
 
 import { addBook, removeBook, populateBooksFromStorage } from './modules/books-manager.js';
-import { $select, $selectById } from './modules/selectors.js';
+import { $select, $selectById, addNewForm as form } from './modules/selectors.js';
 
-const anchors = $select('.navbar a', true);
+const anchors = Array.from($select('.navbar a', true));
 
-function switchSection(event) {
+const switchSection = (event) => {
   event.preventDefault();
 
-  this.classList.toggle('active', true);
+  const recentAnchor = anchors.find(node => node.classList.contains('active'))
+  const $this = event.target;
 
-  let recentSectionId;
+  if (recentAnchor === $this) return;
 
-  for (const anchor of anchors) {
-    if (anchor !== this && anchor.classList.contains('active')) {
-      [, recentSectionId] = anchor.href.split('#');
-      anchor.classList.remove('active');
-      break;
-    }
-  }
+  recentAnchor.classList.remove('active');
+  $this.classList.add('active');
 
-  if (recentSectionId !== undefined) {
-    $selectById(recentSectionId).classList.add('invisible');
-    $selectById(this.href.split('#')[1]).classList.remove('invisible');
-  }
+  const [, recentSectionId] = recentAnchor.href.split('#');
+
+  $selectById(recentSectionId).classList.add('invisible');
+  $selectById($this.href.split('#')[1]).classList.remove('invisible');
 }
 
-document.forms[0].addEventListener('submit', addBook);
+form.addEventListener('submit', addBook);
 document.body.addEventListener('click', removeBook);
 document.addEventListener('DOMContentLoaded', populateBooksFromStorage);
 

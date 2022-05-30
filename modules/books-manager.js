@@ -1,27 +1,24 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable radix */
-
-import { $select, $html } from './selectors.js';
+import { $select, $html, addNewForm as form } from './selectors.js';
 
 const booksList = $select('.books-list');
+
 const booksStorageRefId = 'bookStorage';
 
 class BooksManager {
   constructor() {
+    this.idCounter = 0;
+    this.books = [];
+
     const idCounterTemp = localStorage.getItem('idCounter');
 
     if (idCounterTemp !== null) {
-      this.idCounter = parseInt(idCounterTemp);
-    } else {
-      this.idCounter = 0;
+      this.idCounter = parseInt(idCounterTemp, 10);
     }
 
     const booksTemp = localStorage.getItem(booksStorageRefId);
 
     if (booksTemp !== null) {
       this.books = JSON.parse(booksTemp);
-    } else {
-      this.books = [];
     }
   }
 
@@ -32,8 +29,10 @@ class BooksManager {
   }
 
   add(title, author) {
+    this.idCounter += 1;
+
     const newBook = {
-      id: ++this.idCounter,
+      id: this.idCounter,
       title,
       author,
     };
@@ -80,7 +79,7 @@ export const removeBook = (event) => {
   if (event.target.classList.contains('remove-book-btn')) {
     const bookItem = event.target.parentElement;
     bookItem.style.display = 'none';
-    manager.remove(parseInt(bookItem.id));
+    manager.remove(parseInt(bookItem.id, 10));
 
     if (manager.isEmpty()) {
       toggleBooksPlaceholder(false);
@@ -88,16 +87,16 @@ export const removeBook = (event) => {
   }
 };
 
-export function addBook(event) {
+export const addBook = (event) => {
   event.preventDefault();
   toggleBooksPlaceholder(true);
 
-  const book = manager.add(this.elements.title.value, this.elements.author.value);
+  const book = manager.add(form.elements.title.value, form.elements.author.value);
   booksList.appendChild(render(book));
 
   $select('.navbar a').click();
-  this.reset();
-}
+  form.reset();
+};
 
 export const populateBooksFromStorage = () => {
   const books = manager.getAllBooks();
