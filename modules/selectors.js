@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 /**
  *
  * @param {String} target
@@ -24,7 +26,6 @@ export const $text = (target, value, strict) => {
 
   target.textContent = value;
 };
-
 
 /**
  *

@@ -35,7 +35,7 @@ class BooksManager {
     const newBook = {
       id: ++this.idCounter,
       title,
-      author
+      author,
     };
     this.books.push(newBook);
 
@@ -60,19 +60,21 @@ const render = ({ id: bookId, title, author }) => {
   const bookItem = document.createElement('div');
   bookItem.id = bookId;
   bookItem.className = 'book-item';
+
   $html(
     bookItem,
     `<span><b>“${title}”</b> by ${author}</span><button class="remove-book-btn btn" type="button">Remove</button>`,
-    true);
+    true,
+  );
 
   return bookItem;
-}
+};
 
 const toggleBooksPlaceholder = (force) => {
   booksList
     .querySelector('.books-placeholder')
     .classList.toggle('hidden', force);
-}
+};
 
 export function removeBook(event) {
   if (event.target.classList.contains('remove-book-btn')) {
@@ -104,4 +106,4 @@ export const populateBooksFromStorage = () => {
   if (!manager.isEmpty()) {
     toggleBooksPlaceholder();
   }
-}
+};
