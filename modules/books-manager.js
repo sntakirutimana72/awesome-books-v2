@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable radix */
 
-import { $select, $html, $text } from './selectors.js';
+import { $select, $html } from './selectors.js';
 
 const booksList = $select('.books-list');
 const booksStorageRefId = 'bookStorage';
@@ -76,7 +76,7 @@ const toggleBooksPlaceholder = (force) => {
     .classList.toggle('hidden', force);
 };
 
-export function removeBook(event) {
+export const removeBook = (event) => {
   if (event.target.classList.contains('remove-book-btn')) {
     const bookItem = event.target.parentElement;
     bookItem.style.display = 'none';
@@ -86,7 +86,7 @@ export function removeBook(event) {
       toggleBooksPlaceholder(false);
     }
   }
-}
+};
 
 export function addBook(event) {
   event.preventDefault();
