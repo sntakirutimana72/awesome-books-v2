@@ -8,7 +8,7 @@ const anchors = Array.from($select('.navbar a', true));
 const switchSection = (event) => {
   event.preventDefault();
 
-  const recentAnchor = anchors.find(node => node.classList.contains('active'))
+  const recentAnchor = anchors.find((node) => node.classList.contains('active'));
   const $this = event.target;
 
   if (recentAnchor === $this) return;
@@ -20,7 +20,7 @@ const switchSection = (event) => {
 
   $selectById(recentSectionId).classList.add('invisible');
   $selectById($this.href.split('#')[1]).classList.remove('invisible');
-}
+};
 
 form.addEventListener('submit', addBook);
 document.body.addEventListener('click', removeBook);
