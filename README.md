@@ -73,3 +73,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Levina Nadezhda ([@petushka1](https://github.com/petushka1)) ~ Co-Partner on the original design
+
+## 📝 License
+
+This project is [MIT]() licensed.
