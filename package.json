@@ -1,5 +1,5 @@
 {
-  "name": "microverse-html-css-template",
+  "name": "awesome-books-v2",
   "version": "1.0.0",
   "description": "A web application",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sntakirutimana72/microverse-html-css-template.git"
+    "url": "git+https://github.com/sntakirutimana72/awesome-books-v2.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steve Ntakirutimana",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sntakirutimana72/microverse-html-css-template/issues"
+    "url": "https://github.com/sntakirutimana72/awesome-books-v2/issues"
   },
-  "homepage": "https://github.com/sntakirutimana72/microverse-html-css-template#readme",
+  "homepage": "https://github.com/sntakirutimana72/awesome-books-v2#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
