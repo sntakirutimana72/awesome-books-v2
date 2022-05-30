@@ -4,10 +4,66 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>App Title</title>
+        <title>Awesome Books</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <main></main>
+        <main>
+            <header>
+                <h3 class="any-heading">Awesome Books</h3>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#booksManager" class="active">List</a></li>
+                        <li><a href="#newBook">Add new</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="show-date">
+                <span></span>
+            </div>
+
+            <section class="books-manager section" id="booksManager">
+                <h1 class="any-heading">All awesome books</h1>
+                <div class="books-list">
+                    <div class="books-placeholder">No books available</div>
+                </div>
+            </section>
+
+            <section class="section invisible" id="newBook">
+                <div>
+                    <form action="#" class="books-creator">
+                        <h2 class="any-heading">Add a new book</h2>
+                        <input type="text" class="field" name="title" placeholder="Title" required>
+                        <input type="text" class="field" name="author" placeholder="Author" required>
+                        <input type="submit" class="btn" value="Add">
+                    </form>
+                </div>
+            </section>
+
+            <section class="section invisible" id="contact">
+                <h2 class="any-heading">Contact information</h2>
+                <p class="any-paragraph">
+                    Do have questions or you want to say "Hello"? You can reach out to us!
+                </p>
+                <ul>
+                    <li>Our e-mail:<a href="mailto:joe@example.com?subject=feedback"> mail@mail.com</a></li>
+                    <li>Our phone number: 0043586534422</li>
+                    <li>Our address: Streetname 22, 84503 City, Country</li>
+                </ul>
+            </section>
+
+            <footer>
+                <p class="any-paragraph">Copyright Steven 2022</p>
+            </footer>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+        <script type="module" src="./modules/current_date.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>

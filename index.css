@@ -16,3 +16,194 @@ body {
 .any-paragraph {
   padding: 0;
 }
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn:focus,
+.btn:active,
+.btn:hover {
+  outline: none;
+  color: white;
+  border: none;
+  box-shadow: 0 0 4px #000;
+  background: linear-gradient(orangered, purple);
+}
+
+/* main container */
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+  min-height: 100vh;
+  gap: 10px;
+}
+
+/* header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.navbar li:not(:last-child) {
+  padding-right: 10px;
+  border-right: 2px solid #27272744;
+}
+
+.navbar a {
+  padding: 5px 8px;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.active {
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px black;
+}
+
+.navbar a.active {
+  color: blue;
+}
+
+/* date */
+
+.show-date {
+  padding-right: 25px;
+  color: #272727c0 !important;
+  font-size: 13px;
+  margin-top: -10px;
+  align-self: flex-end;
+}
+
+/* books manager */
+
+.books-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.books-manager h1 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.books-list {
+  width: 100%;
+  border: 2px solid #272727c4;
+}
+
+.books-placeholder {
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #2727278a;
+}
+
+.book-item {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-item:nth-child(even) {
+  background: rgb(185, 182, 182);
+}
+
+.remove-book-btn {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 3px black;
+  cursor: pointer;
+}
+
+/* Add new book form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 16px;
+  padding-top: 15px;
+  max-width: 300px;
+}
+
+form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  border: 2px solid #2727272f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.field:focus {
+  outline: none;
+  border: 2px solid blue;
+  box-shadow: 0 0 4px black;
+}
+
+input[type='submit'] {
+  max-width: fit-content;
+  align-self: flex-end;
+  border: none;
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* section */
+
+.section {
+  padding-top: 50px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.section.invisible {
+  display: none !important;
+}
+
+/* footer */
+
+footer > p {
+  font-size: 14px;
+}
