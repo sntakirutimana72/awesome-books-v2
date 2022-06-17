@@ -2,9 +2,7 @@
 
 # Awesome Books
 
-A Books manager webapp that lists existing records and allows user to add and remove to and from the books record.
-
-> This project is a remodel based on the original design in collaboration with **Levina Nadezhda in Microverse**
+A book-manager app that pulls from the browser localstorage and allows users to view existing books and add more books to the records. Built with HTLM, CSS, JavaScript, and Webpack.
 
 
 ## Built With
