@@ -1,7 +1,7 @@
 {
   "name": "awesome-books-v2",
   "version": "1.0.0",
-  "description": "A web application",
+  "description": "A book-manager app that pulls from the browser localstorage and allows users to view existing books and add more books to the records. Built with HTLM, CSS, and JavaScript.",
   "main": "index.js",
   "scripts": {
     "lint:hint": "npx hint .",
