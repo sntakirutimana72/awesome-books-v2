@@ -2,7 +2,7 @@
 
 # Awesome Books
 
-A book-manager app that pulls from the browser localstorage and allows users to view existing books and add more books to the records. Built with HTLM, CSS, JavaScript, and Webpack.
+A book-manager app that pulls from the browser localstorage and allows users to view existing books and add more books to the records. Built with HTLM, CSS, and JavaScript.
 
 
 ## Built With
